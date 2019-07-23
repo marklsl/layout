@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
-    <!--<h1 @click="changePageFun">开心就好</h1>-->
-
+    <h1 @click="changePageFun(1)">elementUi布局</h1>
+    <h1 @click="changePageFun(2)">flex布局</h1>
+    <h1 @click="changePageFun(3)">float布局</h1>
   </div>
 </template>
 
@@ -9,8 +10,14 @@
 export default {
   name: 'HelloWorld',
   methods:{
-      changePageFun:function(){
-          this.$router.push("hello/testLayout");
+      changePageFun:function(code){
+          if(code==1){
+              this.$router.push("elementUi");
+          }else if(code==2){
+              this.$router.push("float");
+          }else if(code==3){
+              this.$router.push("box");
+          }
       }
   }
 }
